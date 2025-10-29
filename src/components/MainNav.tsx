@@ -10,7 +10,8 @@ import {
   CreditCard, 
   Home,
   Menu,
-  X
+  X,
+  Brain
 } from "lucide-react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -21,6 +22,7 @@ const navigation = [
   { name: "Home", href: "/", icon: Home },
   { name: "Competitor Intelligence", href: "/competitor-intelligence", icon: TrendingUp },
   { name: "AI Content Studio", href: "/content-studio", icon: Sparkles },
+  { name: "GEO Optimization", href: "/geo-optimization", icon: Brain, isNew: true },
   { name: "Smart Targeting", href: "/smart-targeting", icon: Target },
   { name: "Customer Intelligence", href: "/customer-intelligence", icon: Users },
   { name: "Ad Financing", href: "/ad-financing", icon: CreditCard },
@@ -54,7 +56,7 @@ export default function MainNav() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 hover:scale-105 ${
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 hover:scale-105 relative ${
                     isActive
                       ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent"
@@ -62,6 +64,9 @@ export default function MainNav() {
                 >
                   <Icon className="w-4 h-4" />
                   {item.name}
+                  {item.isNew && (
+                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-500 rounded-full animate-pulse" />
+                  )}
                 </Link>
               )
             })}
@@ -87,7 +92,7 @@ export default function MainNav() {
                         key={item.name}
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 ${
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 relative ${
                           isActive
                             ? "bg-primary text-primary-foreground"
                             : "text-muted-foreground hover:text-foreground hover:bg-accent"
@@ -95,6 +100,9 @@ export default function MainNav() {
                       >
                         <Icon className="w-4 h-4" />
                         {item.name}
+                        {item.isNew && (
+                          <span className="ml-auto text-xs bg-cyan-500 text-white px-2 py-0.5 rounded-full">NEW</span>
+                        )}
                       </Link>
                     )
                   })}

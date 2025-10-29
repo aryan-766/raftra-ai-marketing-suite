@@ -17,7 +17,8 @@ import {
   Bot,
   Globe,
   Flame,
-  Award
+  Award,
+  Brain
 } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -37,6 +38,15 @@ const features = [
     href: "/content-studio",
     gradient: "from-indigo-600 to-purple-600",
     stats: "Generate unlimited content"
+  },
+  {
+    title: "GEO Optimization",
+    description: "Future-proof your content for AI search engines like ChatGPT, Perplexity & Bard",
+    icon: Brain,
+    href: "/geo-optimization",
+    gradient: "from-cyan-600 to-blue-600",
+    stats: "AI-first visibility",
+    isNew: true
   },
   {
     title: "Smart Targeting",
@@ -190,7 +200,15 @@ export default function Home() {
                   whileHover={{ y: -8, scale: 1.02 }}
                 >
                   <Link href={feature.href}>
-                    <Card className="group h-full transition-all hover:shadow-xl cursor-pointer border-2 hover:border-violet-200 dark:hover:border-violet-800">
+                    <Card className="group h-full transition-all hover:shadow-xl cursor-pointer border-2 hover:border-violet-200 dark:hover:border-violet-800 relative overflow-hidden">
+                      {feature.isNew && (
+                        <div className="absolute top-3 right-3 z-10">
+                          <Badge className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-0 animate-pulse shadow-lg">
+                            <Zap className="w-3 h-3 mr-1" />
+                            NEW
+                          </Badge>
+                        </div>
+                      )}
                       <CardHeader>
                         <motion.div 
                           className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-4`}
