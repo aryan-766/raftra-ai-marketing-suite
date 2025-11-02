@@ -12,14 +12,7 @@ import {
   Users,
   Zap,
   ArrowRight,
-  Bot,
-  Globe,
   Award,
-  Rocket,
-  Brain,
-  BarChart3,
-  MessageSquare,
-  Palette,
   Shield
 } from "lucide-react"
 import { motion } from "framer-motion"
@@ -29,45 +22,6 @@ const stats = [
   { label: "Campaigns Managed", value: "2.4M", icon: Target },
   { label: "AI Insights Generated", value: "18M", icon: Sparkles },
   { label: "Average ROI", value: "342%", icon: TrendingUp },
-]
-
-const keyFeatures = [
-  {
-    icon: Zap,
-    title: "One-Click Ad Launch",
-    description: "Launch campaigns across Meta, Google & LinkedIn in seconds",
-    color: "from-violet-600 to-indigo-600"
-  },
-  {
-    icon: Brain,
-    title: "AI Creative Director",
-    description: "Auto-generate creatives with Hindi + regional tone support",
-    color: "from-blue-600 to-cyan-600"
-  },
-  {
-    icon: BarChart3,
-    title: "Smart Performance Analytics",
-    description: "Real-time ROAS prediction & cross-platform insights",
-    color: "from-purple-600 to-pink-600"
-  },
-  {
-    icon: Target,
-    title: "Automated Optimization",
-    description: "AI detects fatigue & auto-refreshes underperforming ads",
-    color: "from-orange-600 to-red-600"
-  },
-  {
-    icon: MessageSquare,
-    title: "Meta Comment Manager",
-    description: "AI responds to comments & manages engagement automatically",
-    color: "from-green-600 to-emerald-600"
-  },
-  {
-    icon: Palette,
-    title: "Creative Intelligence",
-    description: "GEO + local trend-aware meme-style creative adaptation",
-    color: "from-pink-600 to-rose-600"
-  }
 ]
 
 export default function Home() {
@@ -90,7 +44,7 @@ export default function Home() {
               >
                 <Badge className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-0 animate-pulse">
                   <Zap className="w-3 h-3 mr-1" />
-                  AI-Powered Marketing Platform
+                  AI Marketing Growth OS
                 </Badge>
               </motion.div>
               
@@ -102,7 +56,7 @@ export default function Home() {
               >
                 <span className="block">Raftra 2.0</span>
                 <span className="block bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient">
-                  Autonomous Marketing Intelligence
+                  Full Growth OS for Your Brand
                 </span>
               </motion.h1>
               
@@ -112,8 +66,8 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                Launch campaigns in 30 minutes with AI-powered automation, creative intelligence, 
-                and real-time performance optimization. Built for Indian SMEs & agencies.
+                Complete AI-powered marketing operating system. Launch campaigns in 30 minutes, 
+                automate creative production, optimize performance, and scale your brand growth—all in one platform.
               </motion.p>
               
               <motion.div 
@@ -158,7 +112,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Key Features Section */}
+        {/* What is Raftra Growth OS Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div 
             className="text-center mb-16"
@@ -168,16 +122,37 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <Badge className="mb-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-0">
-              Powerful Capabilities
+              Complete Growth Operating System
             </Badge>
-            <h2 className="text-4xl font-bold mb-4">Everything You Need to Scale</h2>
+            <h2 className="text-4xl font-bold mb-4">What is Raftra 2.0?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From creative generation to performance optimization - all powered by AI
+              Raftra 2.0 is an <span className="font-semibold text-foreground">AI Marketing Growth OS</span> — 
+              a unified platform that handles everything from ad creation to optimization, 
+              giving you complete control over your brand's growth journey.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {keyFeatures.map((feature, idx) => (
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {[
+              {
+                title: "Launch in 30 Minutes",
+                description: "Connect platforms → Generate creatives → Launch campaigns across Meta, Google, LinkedIn automatically",
+                icon: Zap,
+                color: "from-violet-600 to-indigo-600"
+              },
+              {
+                title: "AI Does the Work",
+                description: "Auto-generate ads, detect fatigue, refresh creatives, optimize budgets, and manage comments—all on autopilot",
+                icon: Sparkles,
+                color: "from-purple-600 to-pink-600"
+              },
+              {
+                title: "Full Brand Control",
+                description: "One dashboard for all campaigns, real-time analytics, ROAS prediction, and financial insights for your entire brand",
+                icon: Target,
+                color: "from-blue-600 to-cyan-600"
+              }
+            ].map((item, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -185,13 +160,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
-                <Card className="relative overflow-hidden border-2 hover:border-violet-600/50 transition-all hover:shadow-lg group">
+                <Card className="border-2 hover:border-violet-600/50 transition-all h-full">
                   <CardContent className="p-6">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                      <feature.icon className="w-6 h-6 text-white" />
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center mb-4`}>
+                      <item.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -199,7 +174,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            className="text-center mt-12"
+            className="text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -224,9 +199,9 @@ export default function Home() {
             <div className="relative overflow-hidden rounded-2xl border-2 bg-gradient-to-br from-violet-600 to-indigo-600 p-12 text-white">
               <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:40px_40px]" />
               <div className="relative max-w-3xl mx-auto text-center space-y-6">
-                <h2 className="text-4xl font-bold">Ready to Transform Your Marketing?</h2>
+                <h2 className="text-4xl font-bold">Ready to Scale Your Brand?</h2>
                 <p className="text-xl text-white/90">
-                  Join thousands of Indian SMEs using Raftra 2.0 to drive better results with AI automation
+                  Join thousands of brands using Raftra 2.0 as their complete marketing growth operating system
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                   <Button size="lg" variant="secondary" className="text-lg px-8 transition-all hover:scale-105">
