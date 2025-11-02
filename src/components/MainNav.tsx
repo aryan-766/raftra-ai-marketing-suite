@@ -36,7 +36,7 @@ export default function MainNav() {
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <span className="font-bold text-xl bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-                Raftra 2.0
+                Raftra
               </span>
             </Link>
           </div>

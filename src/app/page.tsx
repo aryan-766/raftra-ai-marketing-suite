@@ -54,7 +54,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <span className="block">Raftra 2.0</span>
+                <span className="block">Raftra</span>
                 <span className="block bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient">
                   Full Growth OS for Your Brand
                 </span>
@@ -124,9 +124,9 @@ export default function Home() {
             <Badge className="mb-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-0">
               Complete Growth Operating System
             </Badge>
-            <h2 className="text-4xl font-bold mb-4">What is Raftra 2.0?</h2>
+            <h2 className="text-4xl font-bold mb-4">What is Raftra?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Raftra 2.0 is an <span className="font-semibold text-foreground">AI Marketing Growth OS</span> — 
+              Raftra is an <span className="font-semibold text-foreground">AI Marketing Growth OS</span> — 
               a unified platform that handles everything from ad creation to optimization, 
               giving you complete control over your brand's growth journey.
             </p>
@@ -201,7 +201,7 @@ export default function Home() {
               <div className="relative max-w-3xl mx-auto text-center space-y-6">
                 <h2 className="text-4xl font-bold">Ready to Scale Your Brand?</h2>
                 <p className="text-xl text-white/90">
-                  Join thousands of brands using Raftra 2.0 as their complete marketing growth operating system
+                  Join thousands of brands using Raftra as their complete marketing growth operating system
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                   <Button size="lg" variant="secondary" className="text-lg px-8 transition-all hover:scale-105">
@@ -288,12 +288,14 @@ export default function Home() {
                   <Sparkles className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-bold text-xl bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-                  Raftra 2.0
+                  Raftra
                 </span>
               </motion.div>
-              <p className="text-sm text-muted-foreground">
-                © 2024 Raftra. All rights reserved.
-              </p>
+              <div className="space-y-2">
+                <p className="text-sm text-muted-foreground">
+                  © 2024 Raftra
+                </p>
+              </div>
             </div>
           </div>
         </footer>
