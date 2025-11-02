@@ -413,35 +413,45 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <Badge className="mb-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-0">
-              Complete Growth Operating System
+              <Target className="w-3 h-3 mr-1" />
+              Why Brands Need Raftra
             </Badge>
-            <h2 className="text-4xl font-bold mb-4">What is Raftra?</h2>
+            <h2 className="text-4xl font-bold mb-4">The Complete Growth OS Your Brand Deserves</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Raftra is an <span className="font-semibold text-foreground">AI Marketing Growth OS</span> — 
-              a unified platform that handles everything from ad creation to optimization, 
-              giving you complete control over your brand's growth journey.
+              Traditional marketing tools are fragmented, manual, and time-consuming. 
+              Raftra unifies everything into one intelligent platform that works 24/7 for your brand's growth.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             {[
               {
-                title: "Launch in 30 Minutes",
-                description: "Connect platforms → Generate creatives → Launch campaigns across Meta, Google, LinkedIn automatically. No setup complexity, no learning curve. Your first campaign goes live in under 30 minutes with AI-guided setup.",
+                title: "From Hours to Minutes",
+                description: "Marketing teams spend 15+ hours weekly on repetitive tasks. Raftra automates creative production, ad fatigue detection, budget optimization, and comment management—freeing your team to focus on strategy and growth.",
                 icon: Zap,
-                color: "from-violet-600 to-indigo-600"
+                color: "from-violet-600 to-indigo-600",
+                stats: "Save 15+ hours/week"
               },
               {
-                title: "AI Does the Work",
-                description: "Auto-generate ads in Hindi & regional languages, detect fatigue, refresh creatives, optimize budgets, manage comments—all on autopilot. Our AI works 24/7 monitoring performance, making adjustments, and maximizing ROI while you sleep.",
+                title: "Multi-Platform Chaos, Simplified",
+                description: "Managing Meta, Google, LinkedIn, Instagram separately is inefficient and error-prone. Raftra provides one unified dashboard to launch, monitor, and optimize campaigns across all platforms simultaneously.",
+                icon: Globe,
+                color: "from-blue-600 to-cyan-600",
+                stats: "4 platforms, 1 dashboard"
+              },
+              {
+                title: "Stop Guessing, Start Growing",
+                description: "Without AI-powered insights, brands waste ad spend on underperforming campaigns. Raftra's ROAS prediction and financial insights ensure every rupee is invested strategically for maximum returns.",
+                icon: TrendingUp,
+                color: "from-purple-600 to-pink-600",
+                stats: "342% average ROI"
+              },
+              {
+                title: "Scale Without Breaking",
+                description: "Growing brands struggle to scale campaigns without increasing team size. Raftra's AI handles creative refresh, fatigue detection, and optimization automatically—allowing you to 10x your output with the same team.",
                 icon: Sparkles,
-                color: "from-purple-600 to-pink-600"
-              },
-              {
-                title: "Full Brand Control",
-                description: "One unified dashboard for all campaigns across every platform. Real-time analytics, ROAS prediction, financial insights, and AI recommendations. See exactly where every rupee goes and how it performs in real-time.",
-                icon: Target,
-                color: "from-blue-600 to-cyan-600"
+                color: "from-orange-600 to-red-600",
+                stats: "10x campaign capacity"
               }
             ].map((item, idx) => (
               <motion.div
@@ -454,16 +464,43 @@ export default function Home() {
               >
                 <Card className="border-2 hover:border-violet-600/50 transition-all h-full group">
                   <CardContent className="p-6">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                      <item.icon className="w-6 h-6 text-white" />
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0`}>
+                        <item.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <Badge variant="outline" className="mb-2">{item.stats}</Badge>
+                        <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <Card className="border-2 border-violet-200 dark:border-violet-800 bg-gradient-to-br from-violet-50/50 to-indigo-50/50 dark:from-violet-950/20 dark:to-indigo-950/20">
+              <CardContent className="p-8">
+                <div className="max-w-3xl mx-auto">
+                  <h3 className="text-2xl font-bold mb-4 flex items-center justify-center gap-2">
+                    <Award className="w-6 h-6 text-violet-600 dark:text-violet-400" />
+                    Raftra: Full Growth OS for Brands
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Not just a tool, but a complete operating system that handles every aspect of your brand's marketing growth—from AI-powered creative production to automated optimization, real-time analytics, and intelligent scaling. Everything you need to grow, in one platform.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </section>
 
         {/* CTA Section */}
