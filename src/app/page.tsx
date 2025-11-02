@@ -23,7 +23,9 @@ import {
   Globe,
   Settings,
   CheckCircle2,
-  Play
+  Play,
+  Search,
+  Bot
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState } from "react"
@@ -112,6 +114,20 @@ const mvpFeatures = [
     highlights: ["Meme-style adaptation", "Regional language support", "Brand voice learning", "Auto image/video refresh"]
   },
   {
+    title: "SEO Optimizer",
+    description: "AI-powered search engine optimization that analyzes your content, identifies keyword opportunities, and provides real-time recommendations to rank higher on Google, Bing, and other traditional search engines.",
+    icon: Search,
+    color: "from-green-600 to-emerald-600",
+    highlights: ["Keyword research & gap analysis", "On-page SEO optimization", "Competitor ranking insights", "Real-time SEO scoring"]
+  },
+  {
+    title: "GEO (Generative Engine Optimization)",
+    description: "Future-proof your visibility by optimizing for AI search engines like ChatGPT, Perplexity, Claude, and Bard. Track citations, monitor mentions, and dominate AI-generated responses about your brand.",
+    icon: Bot,
+    color: "from-cyan-600 to-blue-600",
+    highlights: ["AI search engine tracking", "Citation optimization", "Query mention analysis", "Multi-AI platform coverage"]
+  },
+  {
     title: "Smart Ad Fatigue Detection",
     description: "AI continuously monitors CTR and ROAS drops across all campaigns. Automatically detects fatigue and triggers creative refresh before performance declines.",
     icon: Eye,
@@ -133,10 +149,10 @@ const mvpFeatures = [
     highlights: ["Auto-responses", "Sentiment analysis", "Spam filtering", "Smart escalation"]
   },
   {
-    title: "GEO + Local Trends Layer",
-    description: "Location-intelligent targeting with real-time local trend analysis. AI identifies regional preferences, cultural moments, and location-specific opportunities for better performance.",
+    title: "Location-Intelligent Targeting",
+    description: "Geographic targeting with real-time local trend analysis. AI identifies regional preferences, cultural moments, and location-specific opportunities for better performance.",
     icon: Globe,
-    color: "from-green-600 to-emerald-600",
+    color: "from-teal-600 to-green-600",
     highlights: ["Regional insights", "Local trend tracking", "GEO optimization", "Cultural adaptation"]
   },
   {
