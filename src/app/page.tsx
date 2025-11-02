@@ -15,147 +15,59 @@ import {
   Bot,
   Globe,
   Award,
-  Check,
-  X
+  Rocket,
+  Brain,
+  BarChart3,
+  MessageSquare,
+  Palette,
+  Shield
 } from "lucide-react"
 import { motion } from "framer-motion"
-
-const competitiveMatrix = [
-  {
-    category: "1️⃣ Competitor Intelligence Layer",
-    features: [
-      {
-        name: "Ad Spy & Competitor Benchmarking",
-        madgicx: true,
-        raftra: true,
-        advantage: "Uses Indian SME dataset + trend visual insights"
-      },
-      {
-        name: "Creative Library Analysis",
-        madgicx: true,
-        raftra: true,
-        advantage: "GEO-aware creative recommendations"
-      },
-      {
-        name: "Industry Performance Tracker",
-        madgicx: true,
-        raftra: true,
-        advantage: "Local industry vs national benchmarks"
-      },
-      {
-        name: "Audience Overlap AI",
-        madgicx: false,
-        raftra: true,
-        advantage: "Raftra detects overlap across Meta + Google"
-      }
-    ]
-  },
-  {
-    category: "2️⃣ Smart Targeting & Generative Optimization Engine",
-    features: [
-      {
-        name: "AI Audience Segmentation",
-        madgicx: true,
-        raftra: true,
-        advantage: "Raftra auto-segments by behavior + region"
-      },
-      {
-        name: "Generative Engine Optimization (GEO)",
-        madgicx: false,
-        raftra: true,
-        advantage: "New layer creates region-specific ad copies & memes"
-      },
-      {
-        name: "Predictive Targeting & ROAS Forecasting",
-        madgicx: true,
-        raftra: true,
-        advantage: "Raftra adds real-time budget adjuster"
-      },
-      {
-        name: "Multi-Platform Ad Launch",
-        madgicx: true,
-        raftra: true,
-        advantage: "Raftra adds LinkedIn + YouTube support"
-      }
-    ]
-  },
-  {
-    category: "3️⃣ AI Campaign & Automation Suite",
-    features: [
-      {
-        name: "AI Campaign Builder",
-        madgicx: true,
-        raftra: true,
-        advantage: "30-min plug-n-play flow"
-      },
-      {
-        name: "Creative Refresh Agent",
-        madgicx: true,
-        raftra: true,
-        advantage: "Cultural meme-based refresh capability"
-      },
-      {
-        name: "AI Comment Responder / Manager",
-        madgicx: false,
-        raftra: true,
-        advantage: "Raftra-only feature for Meta pages"
-      },
-      {
-        name: "WhatsApp + Voice AI Follow-ups",
-        madgicx: false,
-        raftra: true,
-        advantage: "Converts leads faster for Indian businesses"
-      },
-      {
-        name: "Smart Ad Rotation Agent",
-        madgicx: true,
-        raftra: true,
-        advantage: "Auto switches based on CTR drops"
-      }
-    ]
-  },
-  {
-    category: "4️⃣ ROI & Insights Layer",
-    features: [
-      {
-        name: "Unified Performance Dashboard",
-        madgicx: true,
-        raftra: true,
-        advantage: "Power-BI-style visuals with storyline AI"
-      },
-      {
-        name: "Cross-Platform Analytics (Google + Meta)",
-        madgicx: true,
-        raftra: true,
-        advantage: "Raftra adds LinkedIn + Shopify"
-      },
-      {
-        name: "Real-Time ROAS Prediction",
-        madgicx: true,
-        raftra: true,
-        advantage: "Forecasts with India-specific CPC models"
-      },
-      {
-        name: "Financial Insights Layer",
-        madgicx: false,
-        raftra: true,
-        advantage: "Auto suggests budget redistribution"
-      },
-      {
-        name: "Automated Report Generation",
-        madgicx: true,
-        raftra: true,
-        advantage: "Raftra adds one-click PDF & email reports"
-      }
-    ]
-  }
-]
 
 const stats = [
   { label: "Active Users", value: "50K+", icon: Users },
   { label: "Campaigns Managed", value: "2.4M", icon: Target },
   { label: "AI Insights Generated", value: "18M", icon: Sparkles },
   { label: "Average ROI", value: "342%", icon: TrendingUp },
+]
+
+const keyFeatures = [
+  {
+    icon: Zap,
+    title: "One-Click Ad Launch",
+    description: "Launch campaigns across Meta, Google & LinkedIn in seconds",
+    color: "from-violet-600 to-indigo-600"
+  },
+  {
+    icon: Brain,
+    title: "AI Creative Director",
+    description: "Auto-generate creatives with Hindi + regional tone support",
+    color: "from-blue-600 to-cyan-600"
+  },
+  {
+    icon: BarChart3,
+    title: "Smart Performance Analytics",
+    description: "Real-time ROAS prediction & cross-platform insights",
+    color: "from-purple-600 to-pink-600"
+  },
+  {
+    icon: Target,
+    title: "Automated Optimization",
+    description: "AI detects fatigue & auto-refreshes underperforming ads",
+    color: "from-orange-600 to-red-600"
+  },
+  {
+    icon: MessageSquare,
+    title: "Meta Comment Manager",
+    description: "AI responds to comments & manages engagement automatically",
+    color: "from-green-600 to-emerald-600"
+  },
+  {
+    icon: Palette,
+    title: "Creative Intelligence",
+    description: "GEO + local trend-aware meme-style creative adaptation",
+    color: "from-pink-600 to-rose-600"
+  }
 ]
 
 export default function Home() {
@@ -190,7 +102,7 @@ export default function Home() {
               >
                 <span className="block">Raftra 2.0</span>
                 <span className="block bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-gradient">
-                  Next-Gen Marketing Intelligence
+                  Autonomous Marketing Intelligence
                 </span>
               </motion.h1>
               
@@ -200,8 +112,8 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                Built for Indian SMEs. Launch campaigns in 30 minutes with AI-powered automation,
-                GEO optimization, and WhatsApp integration.
+                Launch campaigns in 30 minutes with AI-powered automation, creative intelligence, 
+                and real-time performance optimization. Built for Indian SMEs & agencies.
               </motion.p>
               
               <motion.div 
@@ -246,7 +158,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Competitive Matrix Section */}
+        {/* Key Features Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div 
             className="text-center mb-16"
@@ -256,115 +168,49 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <Badge className="mb-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-0">
-              Competitive Analysis
+              Powerful Capabilities
             </Badge>
-            <h2 className="text-4xl font-bold mb-4">Raftra vs Madgicx – Feature Comparison</h2>
+            <h2 className="text-4xl font-bold mb-4">Everything You Need to Scale</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See how Raftra 2.0 delivers more value with India-specific features and automation
+              From creative generation to performance optimization - all powered by AI
             </p>
           </motion.div>
 
-          <div className="space-y-8">
-            {competitiveMatrix.map((section, sectionIdx) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {keyFeatures.map((feature, idx) => (
               <motion.div
-                key={sectionIdx}
+                key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: sectionIdx * 0.1 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
-                <Card className="overflow-hidden border-2">
-                  <div className="bg-gradient-to-r from-violet-600 to-indigo-600 p-4">
-                    <h3 className="text-xl font-bold text-white">{section.category}</h3>
-                  </div>
-                  
-                  {/* Desktop Table */}
-                  <div className="hidden lg:block overflow-x-auto">
-                    <table className="w-full">
-                      <thead className="bg-muted/50">
-                        <tr>
-                          <th className="text-left p-4 font-semibold">Feature</th>
-                          <th className="text-center p-4 font-semibold w-32">Madgicx</th>
-                          <th className="text-center p-4 font-semibold w-32">Raftra 2.0</th>
-                          <th className="text-left p-4 font-semibold">Raftra Advantage / Add-On</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {section.features.map((feature, idx) => (
-                          <tr key={idx} className="border-t hover:bg-muted/30 transition-colors">
-                            <td className="p-4">{feature.name}</td>
-                            <td className="p-4 text-center">
-                              {feature.madgicx ? (
-                                <div className="flex items-center justify-center">
-                                  <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                                    <Check className="w-4 h-4 text-green-600 dark:text-green-400" />
-                                  </div>
-                                </div>
-                              ) : (
-                                <div className="flex items-center justify-center">
-                                  <div className="w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
-                                    <X className="w-4 h-4 text-red-600 dark:text-red-400" />
-                                  </div>
-                                </div>
-                              )}
-                            </td>
-                            <td className="p-4 text-center">
-                              <div className="flex items-center justify-center">
-                                <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                                  <Check className="w-4 h-4 text-green-600 dark:text-green-400" />
-                                </div>
-                              </div>
-                            </td>
-                            <td className="p-4">
-                              <div className="flex items-start gap-2">
-                                {!feature.madgicx && (
-                                  <Badge className="bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 border-0 shrink-0">
-                                    Exclusive
-                                  </Badge>
-                                )}
-                                <span className="text-sm text-muted-foreground">{feature.advantage}</span>
-                              </div>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-
-                  {/* Mobile View */}
-                  <div className="lg:hidden divide-y">
-                    {section.features.map((feature, idx) => (
-                      <div key={idx} className="p-4 space-y-3">
-                        <div className="font-semibold">{feature.name}</div>
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm text-muted-foreground">Madgicx:</span>
-                            {feature.madgicx ? (
-                              <Check className="w-4 h-4 text-green-600 dark:text-green-400" />
-                            ) : (
-                              <X className="w-4 h-4 text-red-600 dark:text-red-400" />
-                            )}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm text-muted-foreground">Raftra:</span>
-                            <Check className="w-4 h-4 text-green-600 dark:text-green-400" />
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-2 pt-2 border-t">
-                          {!feature.madgicx && (
-                            <Badge className="bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 border-0 shrink-0">
-                              Exclusive
-                            </Badge>
-                          )}
-                          <span className="text-sm text-muted-foreground">{feature.advantage}</span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                <Card className="relative overflow-hidden border-2 hover:border-violet-600/50 transition-all hover:shadow-lg group">
+                  <CardContent className="p-6">
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </CardContent>
                 </Card>
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Link href="/features">
+              <Button size="lg" variant="outline" className="text-lg px-8">
+                Explore All Features
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+          </motion.div>
         </section>
 
         {/* CTA Section */}
@@ -387,15 +233,17 @@ export default function Home() {
                     Start Free Trial
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
-                  <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent border-white text-white hover:bg-white/10 transition-all hover:scale-105">
-                    Schedule Demo
-                  </Button>
+                  <Link href="/contact">
+                    <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent border-white text-white hover:bg-white/10 transition-all hover:scale-105">
+                      Contact Sales
+                    </Button>
+                  </Link>
                 </div>
                 <div className="flex items-center justify-center gap-8 pt-8 text-sm text-white/80">
                   {[
                     { icon: Award, text: "No credit card required" },
                     { icon: Zap, text: "Setup in 5 minutes" },
-                    { icon: Globe, text: "Cancel anytime" }
+                    { icon: Shield, text: "Cancel anytime" }
                   ].map((item, idx) => (
                     <motion.div 
                       key={idx}
@@ -422,8 +270,8 @@ export default function Home() {
               <div>
                 <h3 className="font-semibold mb-4">Product</h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li><a href="#" className="hover:text-foreground transition-colors">Features</a></li>
-                  <li><a href="#" className="hover:text-foreground transition-colors">Pricing</a></li>
+                  <li><Link href="/features" className="hover:text-foreground transition-colors">Features</Link></li>
+                  <li><Link href="/pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
                   <li><a href="#" className="hover:text-foreground transition-colors">Integrations</a></li>
                   <li><a href="#" className="hover:text-foreground transition-colors">API</a></li>
                 </ul>
@@ -451,7 +299,7 @@ export default function Home() {
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li><a href="#" className="hover:text-foreground transition-colors">About</a></li>
                   <li><a href="#" className="hover:text-foreground transition-colors">Careers</a></li>
-                  <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
+                  <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
                   <li><a href="#" className="hover:text-foreground transition-colors">Privacy</a></li>
                 </ul>
               </div>

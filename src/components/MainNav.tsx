@@ -3,15 +3,12 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { 
-  TrendingUp, 
-  Sparkles, 
-  Target, 
-  Users, 
-  CreditCard, 
   Home,
+  Sparkles,
   Menu,
-  X,
-  Brain
+  DollarSign,
+  MessageSquare,
+  Zap
 } from "lucide-react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -20,12 +17,9 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 const navigation = [
   { name: "Home", href: "/", icon: Home },
-  { name: "Competitor Intelligence", href: "/competitor-intelligence", icon: TrendingUp },
-  { name: "AI Content Studio", href: "/content-studio", icon: Sparkles },
-  { name: "GEO Optimization", href: "/geo-optimization", icon: Brain, isNew: true },
-  { name: "Smart Targeting", href: "/smart-targeting", icon: Target },
-  { name: "Customer Intelligence", href: "/customer-intelligence", icon: Users },
-  { name: "Ad Financing", href: "/ad-financing", icon: CreditCard },
+  { name: "Features", href: "/features", icon: Zap },
+  { name: "Pricing", href: "/pricing", icon: DollarSign },
+  { name: "Contact", href: "/contact", icon: MessageSquare },
 ]
 
 export default function MainNav() {
@@ -42,7 +36,7 @@ export default function MainNav() {
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <span className="font-bold text-xl bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-                MarketAI
+                Raftra 2.0
               </span>
             </Link>
           </div>
@@ -56,7 +50,7 @@ export default function MainNav() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 hover:scale-105 relative ${
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 hover:scale-105 ${
                     isActive
                       ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:text-foreground hover:bg-accent"
@@ -64,13 +58,13 @@ export default function MainNav() {
                 >
                   <Icon className="w-4 h-4" />
                   {item.name}
-                  {item.isNew && (
-                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-500 rounded-full animate-pulse" />
-                  )}
                 </Link>
               )
             })}
             <ThemeToggle />
+            <Button className="ml-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:opacity-90">
+              Start Free Trial
+            </Button>
           </div>
 
           {/* Mobile Navigation */}
@@ -92,7 +86,7 @@ export default function MainNav() {
                         key={item.name}
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 relative ${
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 ${
                           isActive
                             ? "bg-primary text-primary-foreground"
                             : "text-muted-foreground hover:text-foreground hover:bg-accent"
@@ -100,12 +94,12 @@ export default function MainNav() {
                       >
                         <Icon className="w-4 h-4" />
                         {item.name}
-                        {item.isNew && (
-                          <span className="ml-auto text-xs bg-cyan-500 text-white px-2 py-0.5 rounded-full">NEW</span>
-                        )}
                       </Link>
                     )
                   })}
+                  <Button className="mt-4 w-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:opacity-90">
+                    Start Free Trial
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
