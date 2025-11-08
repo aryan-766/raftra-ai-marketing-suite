@@ -8,19 +8,19 @@ import {
   Menu,
   DollarSign,
   MessageSquare,
-  Zap } from
-"lucide-react";
+  Zap
+} from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const navigation = [
-{ name: "Home", href: "/", icon: Home },
-{ name: "Features", href: "/features", icon: Zap },
-{ name: "Pricing", href: "/pricing", icon: DollarSign },
-{ name: "Contact", href: "/contact", icon: MessageSquare }];
-
+  { name: "Home", href: "/", icon: Home },
+  { name: "Features", href: "/features", icon: Zap },
+  { name: "Pricing", href: "/pricing", icon: DollarSign },
+  { name: "Contact", href: "/contact", icon: MessageSquare }
+];
 
 export default function MainNav() {
   const pathname = usePathname();
@@ -32,10 +32,10 @@ export default function MainNav() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 group">
-              <div className="bg-gradient-to-br from-violet-600 to-indigo-600 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110 !w-8 !h-full">
+              <div className="w-8 h-8 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent !font-(family-name:--font-noto-sans-jp) !font-extrabold">
+              <span className="text-xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
                 Raftra
               </span>
             </Link>
@@ -51,15 +51,15 @@ export default function MainNav() {
                   key={item.name}
                   href={item.href}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 hover:scale-105 ${
-                  isActive ?
-                  "bg-primary text-primary-foreground" :
-                  "text-muted-foreground hover:text-foreground hover:bg-accent"}`
-                  }>
-
+                    isActive
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                  }`}
+                >
                   <Icon className="w-4 h-4" />
                   {item.name}
-                </Link>);
-
+                </Link>
+              );
             })}
             <ThemeToggle />
             <Button className="ml-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:opacity-90">
@@ -87,15 +87,15 @@ export default function MainNav() {
                         href={item.href}
                         onClick={() => setOpen(false)}
                         className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 ${
-                        isActive ?
-                        "bg-primary text-primary-foreground" :
-                        "text-muted-foreground hover:text-foreground hover:bg-accent"}`
-                        }>
-
+                          isActive
+                            ? "bg-primary text-primary-foreground"
+                            : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                        }`}
+                      >
                         <Icon className="w-4 h-4" />
                         {item.name}
-                      </Link>);
-
+                      </Link>
+                    );
                   })}
                   <Button className="mt-4 w-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:opacity-90">
                     Start Free Trial
@@ -106,6 +106,6 @@ export default function MainNav() {
           </div>
         </div>
       </div>
-    </nav>);
-
+    </nav>
+  );
 }
