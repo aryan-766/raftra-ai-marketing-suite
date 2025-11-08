@@ -18,6 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Jp:wght@100;200;300;400;500;600;700;800;900&display=swap" />        <style>{`
+        :root {
+          --font-noto-sans-jp: 'Noto Sans Jp', sans-serif;
+        }
+      `}</style>
+      </head>
       <body className="antialiased">
         <ThemeProvider defaultTheme="system" storageKey="marketai-theme">
           <SmoothScroll>
